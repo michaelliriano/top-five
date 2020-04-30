@@ -1,38 +1,240 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  overflow: hidden;
+}
+.red-highlight{
+  color:#9e1336;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#home-guest{
+  height: 100vh;
+  width: 100%;
+}
+
+nav{
+  position: fixed;
+  background-color: #9e1336;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 100
+}
+.nav-menu{
+  position: absolute;
+  right: 10px;
+  top: 35%;
+}
+.nav-list {
+  display: inline;
+  color: #ffffff;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.nav-list:hover {
+  cursor: pointer;
+  color: #ffff;
+  border-bottom:solid 3px #000000;
+}
+.burger-menu{
+  position: absolute;
+  right: 35px;
+  top: 13px;
+  cursor: pointer;
+  display: none;
+}
+.menu{
+  height: 3px;
+  width: 35px;
+  background-color: rgb(255, 255, 255);
+  margin: 6px 0;
+  z-index: 800;
+}
+.logo{
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 100px;
+  height: 100%; 
+  cursor: pointer;
+}
+
+.logo h3{
+  display: inline-block;
+  color: #ffffff;
+  font-size: 30px;
+  width: 150px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 2px;
+  position: relative;
+  top: 10px;
+}
+.hero-photo {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.hero-image{
+  height: 100%;
+  width: 100%;
+  background-image: url('/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero{
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: #ffffff ;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-left: solid 5px #9e1336;
+  border-bottom: solid 5px #9e1336;
+}
+.hero h1{
+  font-size: 40px;
+  margin-left: 5px;
+  letter-spacing: 10px;
+}
+
+/* Sign up */
+.sign-up-form{
+  position: absolute;
+  height: 600;
+  width: 350px;
+  top: 20%;
+  right: 100px;
+  background-color: #00000000;
   text-align: center;
+  overflow: hidden;
+
+}
+.sign-up-form h1{
+  color: #ffffff;
+  font-size: 40px;
+  margin-bottom: 20px;
+  border-bottom: 5px solid #9e1336;
+}
+.sign-up-form p{
+  color: #ffff;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.guest-form{
+  text-align: left;
+}
+.guest-form label{
+  position: relative;
+  display: block;
+  color: #ffff;
+  padding-left: 10px;
+  margin-bottom: 5px;
+
+}
+.guest-form input{
+  position: relative;
+  height: 30px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+
+}
+.Signup-btn{
+  background: #9e1336!important;
+  border: none;
+  margin: 0!important;
+  color: #ffff!important;
+  margin: 0;
+  padding: 0!important;
+  cursor: pointer;
+  font-weight: 100;
+}
+.register-small{
+  display: none;
+}
+.login-small{
+  display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Media Queries */
+@media screen and (max-width: 992px) {
+  .sign-up-form{
+      display: none;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .hero{
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff ;
+      border-left: none;
+      border-top: 5px solid #9e1336;
+      
   }
-  to {
-    transform: rotate(360deg);
+  .hero h1{
+      font-size: 40px;
+      margin-left: 5px;
+      letter-spacing: 10px;
   }
+  .hero-image{
+    height: 100%;
+    width: 100%;
+    background-image: url('/hero-small.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+  }
+  .burger-menu{
+      display: block;
+  }
+ 
+  .nav-menu {
+      display: none;
+  }
+  .nav-list  {
+      display: block;
+      padding: 10px;
+  }
+  .nav-list:hover{
+      border: none;
+  }
+  .register-small{
+      position: absolute;
+      display: block;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #9e1336;
+      border: none;
+      height: 30px;
+      width:100px;
+      color: #ffff;
+      cursor: pointer;
+  }
+  .login-small{
+      position: absolute;
+      display: inline;
+      top: 65%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: none;
+      height: 30px;
+      width:300px;
+      color: #ffff;
+  }
+  
 }

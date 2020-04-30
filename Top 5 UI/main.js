@@ -19,6 +19,7 @@ menu.addEventListener('click', (e) => {
         }
     }
     navbar()
+    console.log(e)
 })
 
 // User Class
